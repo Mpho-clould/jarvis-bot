@@ -1,5 +1,6 @@
 const btn = document.querySelector('.talk');
 const content = document.querySelector('.content');
+ 
 function speak(text) {
     const text_speak = new SpeechSynthesisUtterance(text);
 
@@ -16,9 +17,9 @@ function wishMe() {
     if (hour >= 0 && hour < 12) {
         speak("Good Morning Boss...");
     } else if (hour >= 12 && hour < 17) {
-        speak("Good Afternoon Master...");
+        speak("Good Afternoon big man ting...");
     } else {
-        speak("Good Evening Sir...");
+        speak("Good Evening big man...");
     }
 }
 
@@ -42,8 +43,8 @@ btn.addEventListener('click', () => {
 });
 
 function takeCommand(message) {
-    if (message.includes('hey') || message.includes('hello')) {
-        speak("Hello Sir, How May I Help You?");
+    if (message.includes('ola') || message.includes('hello')) {
+        speak("Wagon big man ting, How May I Help You?");
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
         speak("Opening Google...");
